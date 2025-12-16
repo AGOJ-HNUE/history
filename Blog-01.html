@@ -3,261 +3,440 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tư tưởng Nam Bộ qua Nho giáo</title>
+    <title>Chuyên khảo: Sự Tái Cấu Trúc Tư Tưởng Nho Giáo Tại Nam Bộ</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="./Image/AGOJ - logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Mulish:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
     <style>
+        /* --- 1. BIẾN MÀU SẮC & CẤU HÌNH CHUNG --- */
+        :root {
+            /* Palette lấy cảm hứng từ giấy dó, mực tàu và sơn mài */
+            --bg-body: #fdfbf7;      /* Màu kem giấy cũ */
+            --bg-card: #ffffff;      /* Nền bài viết */
+            --text-main: #2b2b2b;    /* Màu đen than (không đen tuyền) */
+            --text-muted: #66605b;   /* Màu xám nâu */
+            --accent-red: #9e2a2b;   /* Đỏ son (Lacquer Red) - Điểm nhấn chính */
+            --accent-gold: #c5a059;  /* Vàng đồng - Điểm nhấn phụ */
+            --border-light: #eaddcf;
+            
+            --font-display: 'Playfair Display', serif; /* Tiêu đề lớn */
+            --font-serif: 'Cormorant Garamond', serif; /* Tiêu đề phụ & Quote */
+            --font-sans: 'Mulish', sans-serif;         /* Nội dung chính */
+        }
+
+        * { box-sizing: border-box; }
+
         body {
-            /* Font nội dung chính sạch sẽ, dễ đọc */
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f7fa;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            font-size: 18px; /* Tăng size chữ để dễ đọc */
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-image: radial-gradient(#eaddcf 1px, transparent 0); /* Họa tiết chấm hạt gạo mờ */
+            background-size: 40px 40px;
         }
-        .container {
-            background-color: #ffffff;
-            padding: 50px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            border-radius: 8px;
+
+        /* --- 2. LAYOUT & KHUNG BÀI VIẾT --- */
+        .wrapper {
+            max-width: 860px; /* Thu hẹp chiều ngang để mắt không bị mỏi */
+            margin: 60px auto;
+            background: var(--bg-card);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05), 0 5px 15px rgba(0,0,0,0.03);
+            border-top: 5px solid var(--accent-red); /* Viền đỏ trên cùng tạo điểm nhấn */
+            position: relative;
+            overflow: hidden;
         }
+
+        /* --- 3. HEADER (PHẦN ĐẦU) --- */
+        header {
+            padding: 80px 60px 50px;
+            text-align: center;
+            background: linear-gradient(to bottom, #fffbf2, #ffffff);
+        }
+
+        .journal-tag {
+            display: inline-block;
+            font-family: var(--font-sans);
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent-red);
+            border: 1px solid var(--accent-red);
+            padding: 5px 15px;
+            border-radius: 50px;
+            margin-bottom: 30px;
+        }
+
         h1 {
-            color: #2c3e50;
-            border-bottom: 2px solid #d35400;
-            padding-bottom: 15px;
-            font-size: 2.2em;
-            margin-top: 0;
-            font-family: 'Playfair Display', serif; /* Dùng font nghệ cho tiêu đề lớn */
+            font-family: var(--font-display);
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.2;
+            margin: 0 auto 30px;
+            max-width: 90%;
         }
-        h2 {
-            color: #2980b9;
-            margin-top: 35px;
-            border-left: 5px solid #2980b9;
-            padding-left: 15px;
+
+        .abstract {
+            font-family: var(--font-serif);
+            font-size: 1.35rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 20px 0;
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+            font-style: italic;
+        }
+
+        .abstract strong {
+            color: var(--accent-red);
+            font-style: normal;
+            font-family: var(--font-sans);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-right: 5px;
+        }
+
+        /* --- 4. NỘI DUNG CHÍNH --- */
+        main {
+            padding: 40px 80px 80px;
+        }
+
+        /* Dropcap cho chữ cái đầu tiên */
+        main > p:first-of-type::first-letter {
+            font-family: var(--font-display);
+            font-size: 4.5rem;
+            float: left;
+            line-height: 0.8;
+            margin-right: 15px;
+            color: var(--accent-red);
             font-weight: 700;
         }
-        h3 {
-            color: #34495e;
-            margin-top: 25px;
-            font-weight: 600;
-        }
+
         p {
-            margin-bottom: 15px;
+            margin-bottom: 28px;
             text-align: justify;
+            font-weight: 300;
         }
-        
-        /* --- STYLE CHO TRÍCH DẪN NGHỆ THUẬT --- */
-        .featured-quote-box {
-            background-color: #fffcf5; /* Màu giấy cũ nhẹ */
-            border: 1px solid #e0d0b0;
-            padding: 30px;
-            margin: 40px 0;
-            border-radius: 4px;
+
+        strong {
+            font-weight: 700;
+            color: #000;
+        }
+
+        /* Tiêu đề mục (H2, H3) */
+        h2 {
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            color: #1a1a1a;
+            margin-top: 70px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--border-light);
+            display: flex;
+            align-items: baseline;
+        }
+
+        h2::before {
+            content: "§"; /* Dấu paragraph cổ điển */
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            color: var(--accent-gold);
+            margin-right: 15px;
+            font-weight: 400;
+        }
+
+        h3 {
+            font-family: var(--font-sans);
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--accent-red);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+        /* --- 5. QUOTE BLOCK (TRÍCH DẪN) --- */
+        .quote-block {
+            margin: 50px -40px; /* Phá khung nhẹ */
+            padding: 40px 60px;
+            background-color: #faf9f6;
+            border-left: 6px solid var(--accent-gold);
             position: relative;
-            box-shadow: inset 0 0 20px rgba(166, 124, 0, 0.05);
         }
-        
-        /* Dấu ngoặc kép trang trí lớn */
-        .featured-quote-box::before {
+
+        .quote-block::before {
             content: "“";
-            font-family: 'Playfair Display', serif;
-            font-size: 80px;
-            color: #e67e22;
-            opacity: 0.3;
             position: absolute;
             top: -20px;
             left: 20px;
+            font-family: var(--font-display);
+            font-size: 8rem;
+            color: rgba(197, 160, 89, 0.2);
+            line-height: 1;
         }
 
         .quote-text {
-            /* Font nghệ thuật Playfair Display: Sang trọng, bay bổng */
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5em; 
-            color: #5d4037;
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            font-weight: 600;
             font-style: italic;
+            color: #2c3e50;
             text-align: center;
-            line-height: 1.6;
-            margin-bottom: 20px;
+            line-height: 1.4;
             z-index: 1;
             position: relative;
         }
 
-        .quote-author {
-            font-family: 'Roboto', sans-serif;
-            font-size: 0.9em;
-            color: #888;
-            text-align: right;
-            border-top: 1px solid #e0d0b0;
-            display: inline-block;
-            padding-top: 10px;
-            margin-top: 10px;
-            float: right;
-            font-weight: bold;
+        .quote-source {
+            text-align: center;
+            margin-top: 20px;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--text-muted);
+        }
+
+        .quote-source cite {
+            color: var(--accent-red);
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        /* --- 6. HỘP THÔNG TIN (THEORY BOX) --- */
+        .theory-box {
+            background-color: #fff;
+            border: 1px solid var(--accent-gold);
+            padding: 30px;
+            margin: 40px 0;
+            position: relative;
+            box-shadow: 10px 10px 0 var(--bg-body); /* Hiệu ứng đổ bóng cứng */
+        }
+        
+        .theory-title {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: var(--accent-gold);
+            color: white;
+            padding: 2px 15px;
+            font-family: var(--font-sans);
+            font-weight: 700;
             text-transform: uppercase;
+            font-size: 0.75rem;
             letter-spacing: 1px;
         }
 
-        /* Clear float */
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-
-        /* --- CÁC THÀNH PHẦN KHÁC --- */
-        table {
+        /* --- 7. BẢNG SO SÁNH (TABLE) --- */
+        .comparison-table {
             width: 100%;
-            border-collapse: collapse;
-            margin: 25px 0;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 40px 0;
+            font-size: 0.95rem;
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            overflow: hidden;
         }
-        table thead tr {
-            background-color: #34495e;
-            color: #ffffff;
+        
+        .comparison-table th {
+            background-color: var(--accent-red);
+            color: white;
+            padding: 18px 20px;
             text-align: left;
-        }
-        table th, table td {
-            padding: 12px 15px;
-            border: 1px solid #eee;
-        }
-        table tbody tr:nth-of-type(even) {
-            background-color: #f9f9f9;
-        }
-        .highlight-box {
-            background-color: #e8f6f3;
-            border-left: 5px solid #1abc9c;
-            color: #0e6251;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 0 5px 5px 0;
-        }
-        .citation {
-            font-size: 0.85em;
-            color: #95a5a6;
-            border-top: 1px solid #eee;
-            margin-top: 50px;
-            padding-top: 20px;
-            font-style: italic;
+            font-weight: 400;
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            letter-spacing: 0.5px;
         }
 
-        @media (max-width: 600px) {
-            .container { padding: 20px; }
-            h1 { font-size: 1.8em; }
-            .quote-text { font-size: 1.2em; }
+        .comparison-table td {
+            padding: 20px;
+            border-bottom: 1px solid var(--border-light);
+            vertical-align: top;
+            background: white;
+        }
+
+        .comparison-table tr:last-child td { border-bottom: none; }
+        
+        /* Cột tiêu chí */
+        .col-criterion { 
+            width: 20%; 
+            font-weight: 700; 
+            color: var(--accent-red); 
+            background-color: #fffbf2 !important;
+            border-right: 1px solid var(--border-light);
+        }
+        
+        .col-north { width: 40%; border-right: 1px solid var(--border-light); }
+        .col-south { width: 40%; }
+
+        /* --- 8. FOOTNOTES --- */
+        .footnotes {
+            margin-top: 80px;
+            padding-top: 30px;
+            border-top: 1px dashed var(--text-muted);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .footnotes h3 {
+            font-size: 1rem;
+            color: var(--text-main);
+            margin-top: 0;
+        }
+
+        .footnotes ol { padding-left: 20px; }
+        .footnotes li { margin-bottom: 8px; }
+
+        /* --- RESPONSIVE MOBILE --- */
+        @media (max-width: 768px) {
+            .wrapper { margin: 0; box-shadow: none; border-top: none; }
+            header { padding: 40px 20px; }
+            main { padding: 30px 20px; }
+            h1 { font-size: 2.2rem; }
+            .abstract { font-size: 1.1rem; }
+            
+            .quote-block { 
+                margin: 30px -20px; 
+                padding: 30px; 
+                border-left-width: 4px;
+            }
+            .quote-text { font-size: 1.4rem; }
+            
+            /* Responsive Table: Chuyển thành dạng thẻ */
+            .comparison-table, .comparison-table thead, .comparison-table tbody, .comparison-table th, .comparison-table td, .comparison-table tr { 
+                display: block; 
+            }
+            .comparison-table thead { display: none; }
+            .comparison-table tr { margin-bottom: 20px; border: 1px solid var(--border-light); border-radius: 8px; }
+            .comparison-table td { border-bottom: none; padding: 15px; position: relative; }
+            .col-criterion { 
+                background-color: var(--accent-red) !important; 
+                color: white; 
+                width: 100%;
+                border-right: none;
+            }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-
-    <h1>Sự Chuyển dịch Cơ cấu Xã hội và Tái định hình Tư tưởng Nho giáo trong Văn hóa Nam Bộ</h1>
-
-    <div class="featured-quote-box clearfix">
-        <div class="quote-text">
-            "Quân phi quân, thần phi thần, quân thần vai cộng lạc.<br>
-            Phụ bất phụ, tử bất tử, phụ tử thị đồng hoang."
+<div class="wrapper">
+    <header>
+        <span class="journal-tag">Ký sự thực địa Bắc Hà</span>
+        <h1>Sự Giải Cấu Trúc Nho Giáo Trong Tâm Thức Nam Bộ</h1>
+        <div class="abstract">
+            <strong>Tóm tắt:</strong> Bài viết phân tích sự chuyển dịch từ Nho giáo chính thống (Tống Nho) sang Nho giáo thực hành tại vùng đất Nam Bộ thế kỷ 17-19. Thông qua lăng kính Duy vật lịch sử và Triết học hiện sinh, bài viết lý giải nguyên nhân sự sụp đổ của quyền uy gia trưởng và sự hình thành hệ giá trị "Nghĩa - Tình" đặc trưng.
         </div>
-        <div class="quote-author">
-            — PGS.TS Huỳnh Quốc Thắng
+    </header>
+
+    <main>
+        <p>Lịch sử tư tưởng Việt Nam thường được khái quát hóa qua mô hình "Tam giáo đồng nguyên" với Nho giáo làm trụ cột chính trị - xã hội. Tuy nhiên, khi dòng chảy lịch sử tiến về phương Nam (Nam tiến), sự va chạm giữa trật tự cũ và môi trường sinh thái mới đã tạo ra một đứt gãy triết học sâu sắc.</p>
+        
+        <p>Nhà nghiên cứu Huỳnh Quốc Thắng đã đúc kết hiện tượng này qua một nhận định mang tính cương lĩnh:</p>
+
+        <div class="quote-block">
+            <div class="quote-text">
+                "Quân phi quân, thần phi thần, quân thần vai cộng lạc.<br>
+                Phụ bất phụ, tử bất tử, phụ tử thị đồng hoang."
+            </div>
+            <div class="quote-source">— PGS.TS Huỳnh Quốc Thắng, <cite>Ký sự tài liệu: Tinh hoa Nam Bộ</cite></div>
         </div>
-    </div>
 
-    <h2>1. Mở đầu: Cú Sốc Triết học nơi Tiền đồn Khai phá</h2>
-    <p>Lịch sử tư tưởng Việt Nam thường được nhìn nhận qua lăng kính của sự tiếp biến văn hóa Nho giáo từ phương Bắc, với trọng tâm là sự ổn định, trật tự và tôn ti. Tuy nhiên, khi dòng chảy lịch sử tiến về phương Nam (Nam tiến), đặc biệt là từ thế kỷ 17 đến thế kỷ 19, một sự đứt gãy và tái cấu trúc triết học đã diễn ra âm thầm nhưng quyết liệt. Nhận định của PGS.TS Huỳnh Quốc Thắng không chỉ là một quan sát xã hội học mà còn là một tổng kết triết học về sự sinh tồn.</p>
+        <h2>1. Bối cảnh Sinh thái - Nhân văn: "Đồng Hoang" là Biến số</h2>
+        <p>Để giải mã được tư tưởng, trước hết phải hiểu về không gian sinh tồn. Khác với đồng bằng sông Hồng khép kín sau lũy tre làng, Nam Bộ là vùng "văn minh sông nước - miệt vườn" (Sơn Nam) với tính chất <strong>Mở</strong> và <strong>Động</strong>.</p>
+        
+        <h3>1.1. Từ "Ổn định" sang "Biến động"</h3>
+        <p>Tại Bắc Bộ, con người gắn chặt với đất đai hương hỏa, tạo nên tâm lý "an cư lạc nghiệp". Ngược lại, tại Nam Bộ, môi trường hoang sơ với thú dữ ("Dưới sông sấu lội, trên bờ cọp um") và điều kiện thiên nhiên khắc nghiệt buộc con người phải liên tục di chuyển và đối mặt với ranh giới sinh tử. </p>
+        
+        <div class="theory-box">
+            <span class="theory-title">Giải thiêng</span>
+            <p>Khái niệm "Đồng hoang" trong câu "Phụ tử thị đồng hoang" không chỉ là địa lý, mà là một không gian xã hội nơi các tôn ti trật tự bị vô hiệu hóa. Trước thiên nhiên hùng vĩ và nguy hiểm, chiếc áo mão cân đai của vua quan hay quyền uy của người cha trở nên vô nghĩa nếu không đi kèm với khả năng sinh tồn thực tế.</p>
+        </div>
 
-    <h3>Bản chất của mệnh đề "Phi Quân, Phi Phụ"</h3>
-    <p>Câu nói "Quân phi quân, thần phi thần... Phụ bất phụ, tử bất tử" thoạt nghe như một sự phủ định sạch trơn các luân thường đạo lý (Tam cương) vốn là xương sống của xã hội phong kiến. Trong hệ tư tưởng Tống Nho chiếm ưu thế tại Bắc Bộ thời Lê-Trịnh, việc này được xem là biểu hiện của thời loạn. Tuy nhiên, trong bối cảnh Nam Bộ, mệnh đề này <strong>không mang hàm ý tiêu cực</strong>. Nó ám chỉ sự <em>giải thiêng</em> và <em>phẳng hóa</em> các cấu trúc quyền lực.</p>
-    <p>Cụm từ "vai cộng lạc" (cùng chia sẻ niềm vui) và "thị đồng hoang" (là bạn nơi hoang dã) chính là chìa khóa. Nó báo hiệu sự chuyển đổi từ mô hình xã hội dựa trên "Lễ" sang mô hình dựa trên "Nghĩa" và "Tình".</p>
-    
-    <h2>2. Bối cảnh Địa - Lịch sử: Quy luật của "Đồng Hoang"</h2>
-    <p>Để hiểu tại sao "Cha con là bạn", ta phải hiểu "Đồng hoang" là gì. Đây không chỉ là mô tả vật lý về vùng đất chưa khai phá, mà là một không gian xã hội nơi các quy tắc cũ bị vô hiệu hóa.</p>
+        <h2>2. Phân tích Hiện tượng: Sự Đảo Chiều của Khế Ước Xã Hội</h2>
+        <p>Mệnh đề của Huỳnh Quốc Thắng chỉ ra sự thay đổi trong hai mối quan hệ cốt lõi của Tam Cương: Quân - Thần (Chính trị) và Phụ - Tử (Gia đình).</p>
 
-    <h3>2.1. Sự sụp đổ của thiết chế làng xã cổ truyền</h3>
-    <p>Ở Bắc Bộ, con người gắn chặt với làng xã và đất đai dòng họ. Ngược lại, Nam Bộ là vùng đất "mở". Địa hình kênh rạch chằng chịt tạo ra:</p>
-    <ul>
-        <li><strong>Tính lưu động:</strong> Người dân dễ dàng di chuyển bằng xuồng ghe, làm suy yếu quyền lực cưỡng chế của phong kiến.</li>
-        <li><strong>Sự đối mặt với Thiên nhiên:</strong> Trước thú dữ và dịch bệnh, dòng dõi trâm anh không cứu được mạng người. Chỉ có kỹ năng sinh tồn và sự hỗ trợ lẫn nhau mới quan trọng.</li>
-    </ul>
+        <h3>2.1. Quân phi quân: Từ "Thiên Tử" đến "Thủ Lĩnh"</h3>
+        <p>Trong Nho giáo Tống Nho, Vua là "Thiên tử" (con trời), cai trị bằng sự thiêng liêng và xa cách. Nhưng ở Nam Bộ, các nhân vật lịch sử như Nguyễn Hoàng hay các tướng lĩnh như Thoại Ngọc Hầu, Lê Văn Duyệt xác lập quyền lực thông qua <strong>hiện diện trực tiếp</strong> và <strong>cộng khổ</strong>. </p>
+        <p>Khái niệm "vai cộng lạc" (cùng chia sẻ niềm vui) cho thấy sự chuyển dịch từ mô hình "Cai trị - Phục tùng" sang mô hình "Bảo trợ - Ủng hộ". Nhà nước phong kiến tại Nam Bộ mang tính chất "nhà nước kiến tạo": dân ủng hộ vì nhà nước đào kênh, trị thủy, dẹp loạn, chứ không phải vì mệnh trời trừu tượng.</p>
 
-    <h3>2.2. Sự hình thành tính cách "Tứ hải giai huynh đệ"</h3>
-    <p>Trong môi trường khắc nghiệt, các nhóm dân cư (Việt, Minh Hương, bản địa) phải nương tựa vào nhau. Các liên kết dọc (Vua-Tôi, Cha-Con) trở nên kém hiệu quả hơn các liên kết ngang (Bạn bè, Chiến hữu).</p>
+        <h3>2.2. Phụ bất phụ: Sự sụp đổ của Gia trưởng</h3>
+        <p>Câu "Phụ tử thị đồng hoang" (Cha con là bạn nơi hoang dã) là một tuyên ngôn táo bạo. Trong môi trường khai khẩn, kinh nghiệm của người già (vốn được đề cao trong văn hóa lúa nước ổn định) đôi khi trở nên lỗi thời trước sức trẻ và khả năng thích ứng của người con. Người cha buộc phải bước xuống từ bệ thờ gia trưởng để trở thành người bạn đồng hành cùng con chiến đấu với thiên nhiên.</p>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Đặc điểm</th>
-                <th>Xã hội Nho giáo Bắc Bộ (Truyền thống)</th>
-                <th>Xã hội Nam Bộ (Thời khai phá)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Cấu trúc Làng xã</strong></td>
-                <td>Khép kín, bao bọc bởi lũy tre</td>
-                <td>Mở, trải dài theo kênh rạch</td>
-            </tr>
-            <tr>
-                <td><strong>Cơ sở Quyền lực</strong></td>
-                <td>Sở hữu ruộng đất, Khoa cử</td>
-                <td>Khả năng khai hoang, Võ nghệ, Uy tín</td>
-            </tr>
-            <tr>
-                <td><strong>Mối quan hệ chủ đạo</strong></td>
-                <td>Tôn ti trật tự (Trên - Dưới)</td>
-                <td>Tương thân tương ái (Ngang hàng)</td>
-            </tr>
-            <tr>
-                <td><strong>Luật pháp/Quy tắc</strong></td>
-                <td>Hương ước, Phép vua</td>
-                <td>Luật giang hồ, Nghĩa khí, Lời hứa</td>
-            </tr>
-        </tbody>
-    </table>
+        <h2>3. Luận giải Kinh tế - Chính trị: Cơ sở Hạ tầng quyết định Kiến trúc Thượng tầng</h2>
+        <p>Dưới góc nhìn của chủ nghĩa duy vật lịch sử, mọi biến đổi về ý thức hệ đều bắt nguồn từ sự thay đổi trong phương thức sản xuất. Đây là phần cốt lõi để giải thích câu hỏi "Tại sao?".</p>
 
-    <h2>3. Giải mã "Quân Phi Quân": Tái định nghĩa Quyền lực Chính trị</h2>
-    <p>Ở Nam Bộ, mệnh đề này biểu thị sự chuyển dịch từ quyền lực định chế sang quyền lực uy tín.</p>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th class="col-criterion">Tiêu chí</th>
+                    <th class="col-north">Mô hình Truyền thống (Bắc Bộ)</th>
+                    <th class="col-south">Mô hình Khai phá (Nam Bộ)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="col-criterion">Tư liệu sản xuất</td>
+                    <td class="col-north"><strong>Hữu hạn & Khép kín:</strong> Ruộng đất dòng họ. Quyền sở hữu tập trung vào trưởng tộc/người cha.</td>
+                    <td class="col-south"><strong>Vô hạn & Mở:</strong> Đất hoang, rừng, kênh rạch là tài nguyên mở (Open Access).</td>
+                </tr>
+                <tr>
+                    <td class="col-criterion">Quan hệ sản xuất</td>
+                    <td class="col-north"><strong>Phụ thuộc:</strong> Con cái phải phục tùng để được thừa kế tư liệu sản xuất.</td>
+                    <td class="col-south"><strong>Độc lập:</strong> Con cái có thể tự khai hoang, tự lập thân mà không cần gia sản.</td>
+                </tr>
+                <tr>
+                    <td class="col-criterion">Quyền lực</td>
+                    <td class="col-north"><strong>Cưỡng chế:</strong> Dựa trên quyền thừa kế và trừng phạt kinh tế.</td>
+                    <td class="col-south"><strong>Uy tín:</strong> Dựa trên tình thương, kinh nghiệm và sự hỗ trợ lẫn nhau.</td>
+                </tr>
+            </tbody>
+        </table>
 
-    <h3>3.1. Hình mẫu Lãnh đạo kiểu "Đại Ca" và "Minh Chủ"</h3>
-    <p>Các tướng lĩnh như Thoại Ngọc Hầu, Lê Văn Duyệt cai quản không chỉ bằng chiếu chỉ mà bằng sự hiện diện trực tiếp. Họ cùng ăn, cùng ở, cùng đào kênh với dân. Mối quan hệ mang tính chất "đối tác": Nhà nước mang lại sự an toàn và thịnh vượng (niềm vui - "lạc"), người dân đóng góp nguồn lực.</p>
+        <h3>3.1. Sự giải phóng lực lượng sản xuất</h3>
+        <p>Khi người con trai có khả năng độc lập về kinh tế (tự tìm đất sống), "xích xiềng" của quan hệ gia trưởng phong kiến bị phá vỡ. Người cha mất đi công cụ kinh tế để áp đặt quyền lực. Do đó, quan hệ huyết thống buộc phải chuyển sang một hình thái mới: quan hệ dựa trên <strong>Tình</strong> và <strong>Nghĩa</strong> thay vì <strong>Lễ</strong> và <strong>Luật</strong>.</p>
 
-    <h3>3.2. Nghiên cứu trường hợp: Tả Quân Lê Văn Duyệt</h3>
-    <p>Dù là đại diện của Vua, Lê Văn Duyệt hành xử đậm chất Nam Bộ: "tiền trảm hậu tấu" vì lợi ích dân chúng, gần gũi và vui chơi cùng dân. Ông được thờ phụng như Thần Thành Hoàng, chứng tỏ quyền lực thực sự đến từ việc thấu hiểu và bảo vệ dân.</p>
+        <h2>4. Bản thể Triết học: Chủ nghĩa Hiện sinh Sơ khai</h2>
+        <p>Nếu bỏ qua các thuật ngữ phương Tây, ta vẫn thấy tư duy Nam Bộ mang đậm màu sắc hiện sinh: <em>Sự tồn tại đi trước bản chất</em>.</p>
 
-    <h3>3.3. Tư tưởng "Trung" kiểu mới</h3>
-    <p>Chữ "Trung" chuyển biến thành chữ "Nghĩa". Người Nam Bộ trung thành với cá nhân lãnh đạo tài đức (như Lê Văn Duyệt) hơn là ngai vàng trừu tượng. Mối quan hệ là hai chiều: "Quân thần vai cộng lạc".</p>
+        <h3>4.1. Phủ định "Chính Danh"</h3>
+        <p>Nho giáo đề cao "Chính Danh": Danh phải đúng thì ngôn mới thuận. Nhưng người Nam Bộ, với tư duy thực dụng, cho rằng: <strong>Hành động xác định danh phận</strong>. </p>
+        <p>Một người Vua không lo được cho dân thì là "Phi quân". Một người Cha không hiểu con thì là "Bất phụ". Sự "phi/bất" này không phải là sự chối bỏ trách nhiệm, mà là sự chối bỏ những danh xưng rỗng tuếch. Nó đòi hỏi con người phải sống thực ("Thực bụng", "Thực tâm") với vai trò của mình.</p>
 
-    <h2>4. Giải mã "Phụ Bất Phụ": Cuộc Cách mạng trong Gia đình</h2>
-    
-    <h3>4.1. Sự xói mòn của chế độ Gia trưởng</h3>
-    <p>Tại Nam Bộ, đất đai vô tận khiến con cái không phụ thuộc hoàn toàn vào thừa kế. Sự tự lập kinh tế sớm làm giảm quyền uy áp đặt của người cha.</p>
+        <h2>5. Kết luận: Sự Tái sinh của Hệ giá trị Nhân bản</h2>
+        <p>Quá trình "Nam tiến" của tư tưởng không phải là quá trình phá hủy văn hóa, mà là quá trình sàng lọc. Những nghi thức rườm rà, những giáo điều trói buộc con người đã bị bỏ lại phía sau.</p>
+        <p>Những gì còn lại là hạt nhân nhân bản nhất của Nho giáo, được bao bọc bởi sự hào sảng của phương Nam:
+        <br>- <strong>Trung:</strong> Không phải trung với ngai vàng, mà trung với lý tưởng và ân nhân.
+        <br>- <strong>Hiếu:</strong> Không phải là vâng lời tuyệt đối, mà là sự phụng dưỡng xuất phát từ tình thương chân thật.
+        <br>- <strong>Nghĩa:</strong> Trở thành hằng số văn hóa ứng xử cao nhất ("Trọng nghĩa khinh tài").</p>
 
-    <h3>4.2. Từ "Phụ - Tử" sang "Bạn bè"</h3>
-    <p>Câu "Phụ tử thị đồng hoang" gợi lên hình ảnh cha con cùng đối mặt thiên nhiên. Người cha trở thành người hướng dẫn và người bạn chiến đấu. Ngôn ngữ xưng hô ("Tía", "Ba") gần gũi, quan hệ bình đẳng hơn, dựa trên tình thương mộc mạc thay vì lễ giáo khắt khe.</p>
-
-    <h3>4.3. Vai trò của Người Phụ nữ</h3>
-    <p>Phụ nữ Nam Bộ ("Nội tướng") nắm kinh tế gia đình và cùng lao động, góp phần tạo nên không khí gia đình dân chủ hơn.</p>
-
-    <h2>5. Giá trị Nhân bản: Đích đến của sự "Phá bỏ"</h2>
-    <p>Nguyên lý Nho giáo bị phá bỏ để hướng đến giá trị nhân bản: tôn trọng con người tự nhiên, đề cao sự bao dung (không xét nét xuất thân) và tính thực tế. Một đạo lý tốt là đạo lý giúp con người sống tốt hơn.</p>
-    <p>Văn hóa "Nghĩa" lên ngôi: Trọng nghĩa khinh tài, tương trợ cộng đồng (vần công, làm từ thiện) bắt nguồn từ tư duy "cộng lạc" và "đồng hoang".</p>
-
-    <div class="highlight-box">
-        <h3>Tổng kết: Tinh hoa Nam Bộ</h3>
-        <p><strong>Bản chất:</strong> Nho giáo không chết, nó lột xác để trở nên "Người" hơn.</p>
-        <p><strong>Quan hệ Vua-Tôi:</strong> Đối tác, chia sẻ lợi ích ("Cộng lạc").</p>
-        <p><strong>Quan hệ Cha-Con:</strong> Đồng hành, tôn trọng ("Bạn đồng hoang").</p>
-        <p><strong>Giá trị cốt lõi:</strong> Phóng khoáng, chân thành, trọng Nghĩa khí.</p>
-    </div>
-
-    <h2>6. Kết luận chung</h2>
-    <p>Nghiên cứu về nhận định của PGS.TS Huỳnh Quốc Thắng cho thấy quá trình Nam tiến là một cuộc viễn chinh của tư tưởng. Sự khắc nghiệt của thiên nhiên đã lọc bỏ những nghi thức rườm rà, chỉ giữ lại hạt nhân đạo đức: Lòng Trung (với tri kỷ), Chữ Hiếu (với cha-bạn), và Tình Nghĩa.</p>
-    <p>Câu nói "Quân phi quân... Phụ bất phụ" là tuyên ngôn nhân bản: Nơi con người sống thực với nhau bằng tình người trọn vẹn. Đây là nền tảng cho sự năng động và tình nghĩa của Nam Bộ ngày nay.</p>
+        <div class="footnotes">
+            <h3>Tham khảo & Chú thích</h3>
+            <ol>
+                <li>
+                Đài Phát thanh - Truyền hình Vĩnh Long (2023), Ký sự tài liệu <em>Tinh hoa Nam Bộ</em>.
+            </li>
+                <li>
+                    Sơn Nam (1970), <em>Văn minh miệt vườn</em>, NXB Văn hóa.
+                </li>
+                <li>
+                    Khái niệm "Cơ sở hạ tầng" và "Kiến trúc thượng tầng" được sử dụng theo quan điểm của Chủ nghĩa duy vật lịch sử để lý giải mối quan hệ biện chứng giữa Kinh tế và Văn hóa.
+                </li>
+            </ol>
+        </div>
+    </main>
 </div>
 
 </body>
