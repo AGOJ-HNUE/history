@@ -8,22 +8,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Mulish:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-    
+    <link rel="icon" href="Image/AGOJ - logo.png" type="image/png"> 
+
     <style>
-        /* --- 1. BIẾN MÀU SẮC & CẤU HÌNH CHUNG --- */
         :root {
-            /* Palette lấy cảm hứng từ giấy dó, mực tàu và sơn mài */
-            --bg-body: #fdfbf7;      /* Màu kem giấy cũ */
-            --bg-card: #ffffff;      /* Nền bài viết */
-            --text-main: #2b2b2b;    /* Màu đen than (không đen tuyền) */
-            --text-muted: #66605b;   /* Màu xám nâu */
-            --accent-red: #9e2a2b;   /* Đỏ son (Lacquer Red) - Điểm nhấn chính */
-            --accent-gold: #c5a059;  /* Vàng đồng - Điểm nhấn phụ */
+            --bg-body: #fdfbf7;
+            --bg-card: #ffffff;
+            --text-main: #2b2b2b;
+            --text-muted: #66605b;
+            --accent-red: #9e2a2b;
+            --accent-gold: #c5a059;
             --border-light: #eaddcf;
             
-            --font-display: 'Playfair Display', serif; /* Tiêu đề lớn */
-            --font-serif: 'Cormorant Garamond', serif; /* Tiêu đề phụ & Quote */
-            --font-sans: 'Mulish', sans-serif;         /* Nội dung chính */
+            --font-display: 'Playfair Display', serif;
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Mulish', sans-serif;        
         }
 
         * { box-sizing: border-box; }
@@ -32,26 +31,24 @@
             background-color: var(--bg-body);
             color: var(--text-main);
             font-family: var(--font-sans);
-            font-size: 18px; /* Tăng size chữ để dễ đọc */
+            font-size: 18px;
             line-height: 1.8;
             margin: 0;
             padding: 0;
-            background-image: radial-gradient(#eaddcf 1px, transparent 0); /* Họa tiết chấm hạt gạo mờ */
+            background-image: radial-gradient(#eaddcf 1px, transparent 0);
             background-size: 40px 40px;
         }
 
-        /* --- 2. LAYOUT & KHUNG BÀI VIẾT --- */
         .wrapper {
-            max-width: 860px; /* Thu hẹp chiều ngang để mắt không bị mỏi */
+            max-width: 860px;
             margin: 60px auto;
             background: var(--bg-card);
             box-shadow: 0 15px 35px rgba(0,0,0,0.05), 0 5px 15px rgba(0,0,0,0.03);
-            border-top: 5px solid var(--accent-red); /* Viền đỏ trên cùng tạo điểm nhấn */
+            border-top: 5px solid var(--accent-red);
             position: relative;
             overflow: hidden;
         }
 
-        /* --- 3. HEADER (PHẦN ĐẦU) --- */
         header {
             padding: 80px 60px 50px;
             text-align: center;
@@ -106,12 +103,10 @@
             margin-right: 5px;
         }
 
-        /* --- 4. NỘI DUNG CHÍNH --- */
         main {
             padding: 40px 80px 80px;
         }
 
-        /* Dropcap cho chữ cái đầu tiên */
         main > p:first-of-type::first-letter {
             font-family: var(--font-display);
             font-size: 4.5rem;
@@ -133,7 +128,6 @@
             color: #000;
         }
 
-        /* Tiêu đề mục (H2, H3) */
         h2 {
             font-family: var(--font-display);
             font-size: 2.2rem;
@@ -147,7 +141,7 @@
         }
 
         h2::before {
-            content: "§"; /* Dấu paragraph cổ điển */
+            content: "§";
             font-family: var(--font-serif);
             font-size: 2rem;
             color: var(--accent-gold);
@@ -166,9 +160,8 @@
             margin-bottom: 15px;
         }
 
-        /* --- 5. QUOTE BLOCK (TRÍCH DẪN) --- */
         .quote-block {
-            margin: 50px -40px; /* Phá khung nhẹ */
+            margin: 50px -40px; 
             padding: 40px 60px;
             background-color: #faf9f6;
             border-left: 6px solid var(--accent-gold);
@@ -213,14 +206,13 @@
             font-style: normal;
         }
 
-        /* --- 6. HỘP THÔNG TIN (THEORY BOX) --- */
         .theory-box {
             background-color: #fff;
             border: 1px solid var(--accent-gold);
             padding: 30px;
             margin: 40px 0;
             position: relative;
-            box-shadow: 10px 10px 0 var(--bg-body); /* Hiệu ứng đổ bóng cứng */
+            box-shadow: 10px 10px 0 var(--bg-body);
         }
         
         .theory-title {
@@ -237,7 +229,6 @@
             letter-spacing: 1px;
         }
 
-        /* --- 7. BẢNG SO SÁNH (TABLE) --- */
         .comparison-table {
             width: 100%;
             border-collapse: separate;
@@ -269,7 +260,6 @@
 
         .comparison-table tr:last-child td { border-bottom: none; }
         
-        /* Cột tiêu chí */
         .col-criterion { 
             width: 20%; 
             font-weight: 700; 
@@ -281,7 +271,6 @@
         .col-north { width: 40%; border-right: 1px solid var(--border-light); }
         .col-south { width: 40%; }
 
-        /* --- 8. FOOTNOTES --- */
         .footnotes {
             margin-top: 80px;
             padding-top: 30px;
@@ -299,7 +288,6 @@
         .footnotes ol { padding-left: 20px; }
         .footnotes li { margin-bottom: 8px; }
 
-        /* --- RESPONSIVE MOBILE --- */
         @media (max-width: 768px) {
             .wrapper { margin: 0; box-shadow: none; border-top: none; }
             header { padding: 40px 20px; }
@@ -314,7 +302,6 @@
             }
             .quote-text { font-size: 1.4rem; }
             
-            /* Responsive Table: Chuyển thành dạng thẻ */
             .comparison-table, .comparison-table thead, .comparison-table tbody, .comparison-table th, .comparison-table td, .comparison-table tr { 
                 display: block; 
             }
